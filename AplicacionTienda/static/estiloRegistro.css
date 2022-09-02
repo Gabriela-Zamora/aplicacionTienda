@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: rgba(0, 255, 55, 0.658);
+align-items: center;
+padding: 0 100px;
+height: 70px;
+}
+
+h1{
+    font-size: 45px;
+    padding-left: 200px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    padding-left: 0;
+}
+
+.agregar{
+    height: 50px;
+    cursor: pointer;
+}
+.agregar::after{
+    content: 'BUSCAR';
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+
+
+
+.buscar{
+    height: 40px;
+    cursor: pointer;
+    padding-right: 8px;
+}
+
+.buscar:hover{
+    height: 45px;
+}
+
+
+.cuadro_buscar{
+    display: flex;
+    text-align: center;
+}
+
+.imagen_editar{
+    height: 30px;
+    padding-right: 620px;
+}
+
+.mas_menos{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}   
+
+.text{
+    padding-right: 30px;
+    padding-left: 30px;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.mas{
+    height: 20px;
+}
+
+.menos{
+    height: 20px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+
+}
+
+.centrar{
+    padding-top: 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 970px;
+    height: 420px;
+}
+
+.clientes{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 0 20px 0 10px;
+}
+
+
+.campo_agregar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 600px;
+}
+
+.input_agregar{
+    border: none;
+    border-bottom: 2px solid black ;
+    width: 400px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button{
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    padding: 7px;
+}
+
+.campos{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    width: 330px;
+}
+
+.campo_clientes{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+width: 300px;
+}
+.cerrar{
+    height: 40px;
+    padding-top: 30px;
+}
+.cerrar2{
+    height: 30px;
+}
+.datos_cliente{
+    border-bottom: 1px solid black;
+}
+.procesos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h3{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.campo_proceso{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+}
+
+h4{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+}

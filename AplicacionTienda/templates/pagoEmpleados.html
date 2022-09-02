@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estiloPagos.css">
+    <link rel="shortcut icon" href="/static/images/logo.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway&display=swap');
+    </style>
+    <title>Imperium D.I.P</title>
+    <form action="pagoTotal" method="POST"></form>
+</head>
+
+<body>
+    <header>
+        <div class="agregar_cliente">
+          <a href="registrar">
+            <img src="static/images/agregar.png" alt="" class="agregar" />
+          </a>
+        </div>
+        <h1>TIENDA_FGJS</h1>
+
+      </header>
+    <div class="clear"></div>
+    <br>
+
+
+
+    <div id="enlaces">
+        <a href="pago">Pago Empleados</a>
+
+        <a href="gestionar_empleados">Empleados</a>
+
+    </div >
+    <form action="pagoTotal" method="POST">
+    <div id="datosPago">
+        <section id="sectEmpleado">
+            <div id="empleado_pago">
+                <p id="TextEmpleado">Documento del cliente: </p> <br>
+                <input type="number" placeholder="Ingrese el documento..." name="cliente" required id="cliente">
+            </div>
+        </section>
+        <section id="sectSalario">
+            <div id="salario">
+                <h1>Valor que debe: </h1> <br>
+                <input type="number" step="any" name="salario" placeholder="Valor que debe..." id="salarioText">
+            </div>
+        </section>
+        <div class="clear"></div>
+        <section id="sectAbono">
+            <div id="abono">
+                <h1>Abono: </h1> <br>
+                <input type="number" step="any" name="abono" placeholder="Total de abono..." id="comicionesText">
+            </div>
+        </section>
+        <div class="clear"></div>
+        <section id="sectdeuda">
+            <div id="deuda">
+                <h1>Agregar a la deuda: </h1> <br>
+                <input type="number" step="any" name="deuda" placeholder="Total lo que agrega..." id="comicionesText">
+            </div>
+        </section>
+        <div class="clear"></div>
+        <div id="posBoton">
+            <button id="boton_pago">
+                calcular pago
+            </button>
+        </div>
+    </div>
+    </form>
+    <div>
+        <section>
+            <h2 id="titulo_salario">SALARIO TOTAL</h2>
+            <div id="pago_total">
+                {% if data!=undefined %}
+                <h2 id="textResultado">El empleado {{ data.empleado }} obtuvo un salario total de {{ data.resultado }}
+                </h2>
+                {% endif %}
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

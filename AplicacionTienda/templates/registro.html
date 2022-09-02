@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/estiloRegistro.css">
+    <link rel="shortcut icon" href="/static/images/logo.png" type="image/png">
+
+    <title>Imperium D.I.P</title>
+</head>
+
+<body>
+    <header>
+        <div class="agregar_cliente">
+          <a href="registrar">
+            <img src="static/images/agregar.png" alt="" class="agregar" />
+          </a>
+        </div>
+        <h1>TIENDA_FGJS</h1>
+  
+        <div class="cuadro_buscar">
+          <img src="static/images/lupa.png" alt="" class="buscar" />
+          <input type="text" placeholder="Buscar" class="boton_buscar" />
+        </div>
+      </header>
+    <div class="clear"></div>
+    <br>
+    <section class="registro">
+        <div class="titulo">
+            <h2>Registro de Clientes</h2>
+        </div>
+        <form id="loginform" action='/registro_usuario' method='POST'>
+            <input type="text" name="documento" placeholder="Documento" required> <br><br>
+            <input type="text" name="nombre" placeholder="Nombre" required> <br> <br>
+            <input type="text" placeholder="telefono" name="Telefono" required><br><br>
+            <input type="text" name="valor" placeholder="Valor" required> <br> <br>
+            <div>
+                <td> <button type="submit" title="Registrar" name="registrar">Registrar</button></td>
+            </div>
+             </form>
+             
+        {% if data!=undefined %}
+        <label style="color: aliceblue;">Resultado: {{ data.resultado }}</label>
+        {%endif%}
+        <a href="/">Regresar</a>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
